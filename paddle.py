@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 class Paddle(Turtle):
 
     def __init__(self, position):
@@ -11,9 +12,11 @@ class Paddle(Turtle):
         self.goto(position)
 
     def move_up(self):
+        """move paddle up"""
         ycor = self.ycor() + 20
         self.goto(self.xcor(), ycor)
 
     def move_down(self):
+        """move paddle down"""
         ycor = self.ycor() - 20
         self.goto(self.xcor(), ycor)
