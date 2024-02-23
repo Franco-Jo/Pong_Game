@@ -25,7 +25,7 @@ screen.onkeypress(fun=l_paddle.move_down, key="s")
 game_is_on = True
 
 while game_is_on:
-    time.sleep(0.02)
+    time.sleep(ball.move_speed)
     screen.update()
     ball.move()
 
@@ -47,4 +47,6 @@ while game_is_on:
         scoreboard.r_point()
         scoreboard.update_scoreboard()
         ball.reset()
+
+
 screen.exitonclick()
