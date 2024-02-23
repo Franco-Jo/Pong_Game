@@ -32,9 +32,11 @@ while game_is_on:
         ball.bounce_y()
 
     # detect collision with right paddle
-    if ball.distance(r_paddle) < 60 and ball.xcor() > 900 or ball.distance(l_paddle) < 50 and ball.xcor() < -900:
+    # not perfect, get dribble effect on the ends of paddle
+    if ball.distance(r_paddle) < 130 and ball.xcor() > 950 or ball.distance(l_paddle) < 130 and ball.xcor() < -950:
         ball.bounce_x()
 
-
+    if ball.xcor() > 1250 or ball.xcor() < -1250:
+        ball.reset()
 
 screen.exitonclick()

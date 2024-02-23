@@ -8,9 +8,8 @@ class Ball(Turtle):
         self.pu()
         self.color('white')
         self.shapesize(stretch_wid=2, stretch_len=2)
-        self.x_move = 10
-        self.y_move = 8
-
+        self.x_move = 13
+        self.y_move = 10
 
     def move(self):
         ycor = self.ycor() + self.y_move
@@ -25,7 +24,9 @@ class Ball(Turtle):
         self.x_move *= -1
 
 
-
+    def reset(self):
+        self.goto(0, 0)
+        self.x_move *= -1
 
 
 
